@@ -1,0 +1,19 @@
+{
+    "name": "mrsuh/rent-schema",
+    "description": "mongo schema for rent project",
+    "type": "library",
+    "require": {
+        "mrsuh/mongo-odm": ">=2.0",
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": { "Schema\\": "src/" }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sukhachev Anton",
+            "email": "mrsuh6@gmail.com"
+        }
+    ]
+}
