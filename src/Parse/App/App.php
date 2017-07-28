@@ -10,9 +10,33 @@ use ODM\Document\Document;
 class App extends Document
 {
     /**
+     * @ODM\Field(name="name", type="string")
+     */
+    private $name;
+
+    /**
      * @ODM\Field(name="token", type="string")
      */
     private $token;
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     * @return $this
+     */
+    public function setName(string $name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
 
     /**
      * @return string
