@@ -1,6 +1,6 @@
 <?php
 
-namespace Schema\ParseList;
+namespace Schema\Parse\ParseList;
 
 class Source
 {
@@ -106,7 +106,7 @@ class Source
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getCity()
     {
@@ -114,10 +114,13 @@ class Source
     }
 
     /**
-     * @param mixed $city
+     * @param string $city
+     * @return $this
      */
-    public function setCity($city)
+    public function setCity(string $city)
     {
         $this->city = $city;
+
+        return $this;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Schema\PublishList;
+namespace Schema\Publish\PublishList;
 
 use ODM\Document\Document;
 

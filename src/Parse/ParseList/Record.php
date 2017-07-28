@@ -1,6 +1,6 @@
 <?php
 
-namespace Schema\ParseList;
+namespace Schema\Parse\ParseList;
 
 use ODM\Document\Document;
 

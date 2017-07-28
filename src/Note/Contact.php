@@ -76,6 +76,17 @@ class Contact
     }
 
     /**
+     * @param int[] $phones
+     * @return $this
+     */
+    public function setPhones(array $phones)
+    {
+        $this->phones = $phones;
+
+        return $this;
+    }
+
+    /**
      * @param int $phone
      * @return $this
      */
