@@ -1,11 +1,11 @@
 <?php
 
-namespace Schema\Publish\PublishList;
+namespace Schema\Parse\Record;
 
 use ODM\Document\Document;
 
 /**
- * @ODM\Collection(name="publish_list")
+ * @ODM\Collection(name="parse_record")
  */
 class Record extends Document
 {
@@ -15,24 +15,19 @@ class Record extends Document
     private $name;
 
     /**
-     * @ODM\Field(name="link", type="string")
-     */
-    private $link;
-
-    /**
      * @ODM\Field(name="city", type="string")
      */
     private $city;
 
     /**
-     * @ODM\Field(name="group_id", type="string")
+     * @ODM\Field(name="link", type="string")
      */
-    private $group_id;
+    private $link;
 
     /**
-     * @ODM\Field(name="user_id", type="string")
+     * @ODM\Field(name="sources", type="Schema\Parse\Record\Source[]")
      */
-    private $user_id;
+    private $sources;
 
     /**
      * @return string
@@ -82,46 +77,30 @@ class Record extends Document
 
     /**
      * @param string $link
+     * @return $this
      */
     public function setLink(string $link)
     {
         $this->link = $link;
-    }
-
-    /**
-     * @return string
-     */
-    public function getGroupId()
-    {
-        return $this->group_id;
-    }
-
-    /**
-     * @param string $group_id
-     * @return $this
-     */
-    public function setGroupId(string $group_id)
-    {
-        $this->group_id = $group_id;
 
         return $this;
     }
 
     /**
-     * @return string
+     * @return Source[]
      */
-    public function getUserId()
+    public function getSources()
     {
-        return $this->user_id;
+        return $this->sources;
     }
 
     /**
-     * @param string $user_id
+     * @param Source $source
      * @return $this
      */
-    public function setUserId(string $user_id)
+    public function addSource(Source $source)
     {
-        $this->user_id = $user_id;
+        $this->sources[] = $source;
 
         return $this;
     }

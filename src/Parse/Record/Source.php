@@ -1,6 +1,6 @@
 <?php
 
-namespace Schema\Parse\ParseList;
+namespace Schema\Parse\Record;
 
 class Source
 {
