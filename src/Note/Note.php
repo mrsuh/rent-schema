@@ -135,7 +135,7 @@ class Note extends Document
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getPrice()
     {
@@ -143,10 +143,10 @@ class Note extends Document
     }
 
     /**
-     * @param integer $price
+     * @param int $price
      * @return $this
      */
-    public function setPrice(integer $price)
+    public function setPrice(int $price)
     {
         $this->price = $price;
 
@@ -173,7 +173,7 @@ class Note extends Document
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getTimestamp()
     {
@@ -181,10 +181,10 @@ class Note extends Document
     }
 
     /**
-     * @param integer $timestamp
+     * @param int $timestamp
      * @return $this
      */
-    public function setTimestamp(integer $timestamp)
+    public function setTimestamp(int $timestamp)
     {
         $this->timestamp = $timestamp;
 
@@ -192,7 +192,7 @@ class Note extends Document
     }
 
     /**
-     * @return integer[]
+     * @return int[]
      */
     public function getSubways()
     {
@@ -200,10 +200,10 @@ class Note extends Document
     }
 
     /**
-     * @param integer $subway
+     * @param int $subway
      * @return $this
      */
-    public function addSubway(integer $subway)
+    public function addSubway(int $subway)
     {
         $this->subways[] = $subway;
 
@@ -307,7 +307,7 @@ class Note extends Document
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getPublishedTimestamp()
     {
@@ -315,12 +315,31 @@ class Note extends Document
     }
 
     /**
-     * @param integer $published_timestamp
+     * @param int $published_timestamp
      * @return $this
      */
-    public function setPublishedTimestamp(integer $published_timestamp)
+    public function setPublishedTimestamp(int $published_timestamp)
     {
         $this->published_timestamp = $published_timestamp;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescriptionHash()
+    {
+        return $this->description_hash;
+    }
+
+    /**
+     * @param $description_hash
+     * @return $this
+     */
+    public function setDescriptionHash($description_hash)
+    {
+        $this->description_hash = $description_hash;
 
         return $this;
     }

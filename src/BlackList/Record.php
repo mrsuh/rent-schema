@@ -5,7 +5,7 @@ namespace Schema\BlackList;
 use ODM\Document\Document;
 
 /**
- * @ODM\Collection(name="black_list_record")
+ * @ODM\Collection(name="black_list")
  */
 class Record extends Document
 {

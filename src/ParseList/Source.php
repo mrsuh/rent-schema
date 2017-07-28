@@ -13,6 +13,11 @@ class Source
     private $id;
 
     /**
+     * @ODM\Field(name="city", type="string")
+     */
+    private $city;
+
+    /**
      * @ODM\Field(name="type", type="string")
      */
     private $type;
@@ -98,5 +103,21 @@ class Source
         $this->parameters = $parameters;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * @param mixed $city
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
     }
 }

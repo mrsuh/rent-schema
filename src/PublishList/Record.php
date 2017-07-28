@@ -5,7 +5,7 @@ namespace Schema\PublishList;
 use ODM\Document\Document;
 
 /**
- * @ODM\Collection(name="community_publish")
+ * @ODM\Collection(name="publish_list")
  */
 class Record extends Document
 {

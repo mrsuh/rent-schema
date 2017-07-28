@@ -5,7 +5,7 @@ namespace Schema\ParseList;
 use ODM\Document\Document;
 
 /**
- * @ODM\Collection(name="parse_list_record")
+ * @ODM\Collection(name="parse_list")
  */
 class Record extends Document
 {

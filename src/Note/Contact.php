@@ -5,6 +5,11 @@ namespace Schema\Note;
 class Contact
 {
     /**
+     * @ODM\Field(name="external_id", type="string")
+     */
+    private $external_id;
+
+    /**
      * @ODM\Field(name="name", type="string")
      */
     private $name;
@@ -63,7 +68,7 @@ class Contact
     }
 
     /**
-     * @return integer[]
+     * @return int[]
      */
     public function getPhones()
     {
@@ -71,10 +76,10 @@ class Contact
     }
 
     /**
-     * @param integer $phone
+     * @param int $phone
      * @return $this
      */
-    public function addPhone(integer $phone)
+    public function addPhone(int $phone)
     {
         $this->phones[] = $phone;
 
@@ -96,6 +101,25 @@ class Contact
     public function setPhotoLink(string $photo_link)
     {
         $this->photo_link = $photo_link;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getExternalId()
+    {
+        return $this->external_id;
+    }
+
+    /**
+     * @param $external_id
+     * @return $this
+     */
+    public function setExternalId($external_id)
+    {
+        $this->external_id = $external_id;
 
         return $this;
     }
