@@ -30,9 +30,9 @@ class Record extends Document
     private $group_id;
 
     /**
-     * @ODM\Field(name="user_id", type="string")
+     * @ODM\Field(name="user", type="string")
      */
-    private $user_id;
+    private $user;
 
     /**
      * @return string
@@ -110,18 +110,18 @@ class Record extends Document
     /**
      * @return string
      */
-    public function getUserId()
+    public function getUser()
     {
-        return $this->user_id;
+        return $this->user;
     }
 
     /**
-     * @param string $user_id
+     * @param $user
      * @return $this
      */
-    public function setUserId(string $user_id)
+    public function setUser(string $user)
     {
-        $this->user_id = $user_id;
+        $this->user = $user;
 
         return $this;
     }
