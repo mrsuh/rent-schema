@@ -23,6 +23,11 @@ class Note extends Document
     private $external_id;
 
     /**
+     * @ODM\Field(name="link", type="string")
+     */
+    private $link;
+
+    /**
      * @ODM\Field(name="city", type="string")
      */
     private $city;
@@ -340,6 +345,25 @@ class Note extends Document
     public function setDescriptionHash($description_hash)
     {
         $this->description_hash = $description_hash;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLink()
+    {
+        return $this->link;
+    }
+
+    /**
+     * @param $link
+     * @return $this
+     */
+    public function setLink($link)
+    {
+        $this->link = $link;
 
         return $this;
     }

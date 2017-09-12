@@ -25,6 +25,11 @@ class User extends Document
     private $password;
 
     /**
+     * @ODM\Field(name="app_token", type="string")
+     */
+    private $app_token;
+
+    /**
      * @return string
      */
     public function getExternalId()
@@ -77,6 +82,25 @@ class User extends Document
     public function setPassword(string $password)
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAppToken()
+    {
+        return $this->app_token;
+    }
+
+    /**
+     * @param string $app_token
+     * @return $this
+     */
+    public function setAppToken(string $app_token)
+    {
+        $this->app_token = $app_token;
 
         return $this;
     }
