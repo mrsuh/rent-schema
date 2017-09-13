@@ -25,9 +25,9 @@ class User extends Document
     private $password;
 
     /**
-     * @ODM\Field(name="app_token", type="string")
+     * @ODM\Field(name="app_id", type="string")
      */
-    private $app_token;
+    private $app_id;
 
     /**
      * @return string
@@ -87,20 +87,28 @@ class User extends Document
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getAppToken()
+    public function getId()
     {
-        return $this->app_token;
+        return $this->id;
     }
 
     /**
-     * @param string $app_token
+     * @return mixed
+     */
+    public function getAppId()
+    {
+        return $this->app_id;
+    }
+
+    /**
+     * @param $app_id
      * @return $this
      */
-    public function setAppToken(string $app_token)
+    public function setAppId($app_id)
     {
-        $this->app_token = $app_token;
+        $this->app_id = $app_id;
 
         return $this;
     }
