@@ -25,6 +25,11 @@ class City extends Document
     private $picture_link;
 
     /**
+     * @ODM\Field(name="has_subway", type="bool")
+     */
+    private $has_subway;
+
+    /**
      * @return string
      */
     public function getName()
@@ -77,6 +82,25 @@ class City extends Document
     public function setShortName(string $short_name)
     {
         $this->short_name = $short_name;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function hasSubway()
+    {
+        return $this->has_subway;
+    }
+
+    /**
+     * @param $has_subway
+     * @return $this
+     */
+    public function setHasSubway($has_subway)
+    {
+        $this->has_subway = $has_subway;
 
         return $this;
     }
