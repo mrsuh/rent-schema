@@ -35,6 +35,11 @@ class Record extends Document
     private $user;
 
     /**
+     * @ODM\Field(name="active", type="bool")
+     */
+    private $active;
+
+    /**
      * @return string
      */
     public function getName()
@@ -122,6 +127,25 @@ class Record extends Document
     public function setUser(string $user)
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isActive()
+    {
+        return $this->active;
+    }
+
+    /**
+     * @param $active
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->active = $active;
 
         return $this;
     }
