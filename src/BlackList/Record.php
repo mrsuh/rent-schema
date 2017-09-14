@@ -14,9 +14,9 @@ class Record extends Document
     const TYPE_DESCRIPTION = 3;
 
     /**
-     * @ODM\Field(name="text", type="string")
+     * @ODM\Field(name="regexp", type="string")
      */
-    private $text;
+    private $regexp;
 
     /**
      * @ODM\Field(name="type", type="integer")
@@ -24,20 +24,20 @@ class Record extends Document
     private $type;
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getText()
+    public function getRegexp()
     {
-        return $this->text;
+        return $this->regexp;
     }
 
     /**
-     * @param $text
+     * @param $regexp
      * @return $this
      */
-    public function setText($text)
+    public function setRegexp(string $regexp)
     {
-        $this->text = $text;
+        $this->regexp = $regexp;
 
         return $this;
     }
