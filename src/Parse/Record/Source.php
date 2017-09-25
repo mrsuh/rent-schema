@@ -6,6 +6,7 @@ class Source
 {
     const TYPE_VK_COMMENT = 'vk.com:comment';
     const TYPE_VK_WALL    = 'vk.com:wall';
+    const TYPE_AVITO      = 'avito.ru';
 
     /**
      * @ODM\Field(name="id", type="string")
