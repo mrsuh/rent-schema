@@ -86,11 +86,6 @@ class Note extends Document
         $this->published = false;
     }
 
-    public function initId()
-    {
-        $this->id = Date('U') . $this->external_id;
-    }
-
     /**
      * @return string
      */
