@@ -18,11 +18,6 @@ class Note extends Document
     const TYPE_ERR    = 6;
 
     /**
-     * @ODM\Field(name="external_id", type="string")
-     */
-    private $external_id;
-
-    /**
      * @ODM\Field(name="link", type="string")
      */
     private $link;
@@ -46,11 +41,6 @@ class Note extends Document
      * @ODM\Field(name="price", type="integer")
      */
     private $price;
-
-    /**
-     * @ODM\Field(name="area", type="float")
-     */
-    private $area;
 
     /**
      * @ODM\Field(name="contact", type="Schema\Note\Contact")
@@ -78,7 +68,7 @@ class Note extends Document
     private $description_hash;
 
     /**
-     * @ODM\Field(name="published", type="integer")
+     * @ODM\Field(name="published", type="bool")
      */
     private $published;
 

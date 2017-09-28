@@ -5,9 +5,9 @@ namespace Schema\Note;
 class Contact
 {
     /**
-     * @ODM\Field(name="external_id", type="string")
+     * @ODM\Field(name="id", type="string")
      */
-    private $external_id;
+    private $id;
 
     /**
      * @ODM\Field(name="name", type="string")
@@ -69,20 +69,20 @@ class Contact
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getExternalId()
+    public function getId()
     {
-        return $this->external_id;
+        return $this->id;
     }
 
     /**
-     * @param $external_id
+     * @param $id
      * @return $this
      */
-    public function setExternalId($external_id)
+    public function setId($id)
     {
-        $this->external_id = $external_id;
+        $this->id = $id;
 
         return $this;
     }
