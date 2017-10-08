@@ -18,6 +18,11 @@ class Note extends Document
     const TYPE_ERR    = 6;
 
     /**
+     * @ODM\Field(name="external_id", type="string")
+     */
+    private $external_id;
+
+    /**
      * @ODM\Field(name="link", type="string")
      */
     private $link;
@@ -139,25 +144,6 @@ class Note extends Document
     public function setPrice(int $price)
     {
         $this->price = $price;
-
-        return $this;
-    }
-
-    /**
-     * @return float
-     */
-    public function getArea()
-    {
-        return $this->area;
-    }
-
-    /**
-     * @param float $area
-     * @return $this
-     */
-    public function setArea(float $area)
-    {
-        $this->area = $area;
 
         return $this;
     }

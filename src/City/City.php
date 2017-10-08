@@ -20,6 +20,11 @@ class City extends Document
     private $short_name;
 
     /**
+     * @ODM\Field(name="vk_id", type="integer")
+     */
+    private $vk_id;
+
+    /**
      * @ODM\Field(name="picture_link", type="string")
      */
     private $picture_link;
@@ -101,6 +106,25 @@ class City extends Document
     public function setHasSubway($has_subway)
     {
         $this->has_subway = $has_subway;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getVkId()
+    {
+        return $this->vk_id;
+    }
+
+    /**
+     * @param int $vk_id
+     * @return $this
+     */
+    public function setVkId(int $vk_id)
+    {
+        $this->vk_id = $vk_id;
 
         return $this;
     }
