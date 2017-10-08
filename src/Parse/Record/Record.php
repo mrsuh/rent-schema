@@ -95,6 +95,17 @@ class Record extends Document
     }
 
     /**
+     * @param array $sources
+     * @return $this
+     */
+    public function setSources(array $sources)
+    {
+        $this->sources = $sources;
+
+        return $this;
+    }
+
+    /**
      * @param Source $source
      * @return $this
      */
