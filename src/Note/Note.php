@@ -88,6 +88,7 @@ class Note extends Document
     public function __construct()
     {
         $this->subways   = [];
+        $this->photos   = [];
         $this->published = false;
     }
 
