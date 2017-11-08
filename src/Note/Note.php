@@ -18,11 +18,6 @@ class Note extends Document
     const TYPE_ERR    = 6;
 
     /**
-     * @ODM\Field(name="external_id", type="string")
-     */
-    private $external_id;
-
-    /**
      * @ODM\Field(name="link", type="string")
      */
     private $link;
@@ -78,6 +73,11 @@ class Note extends Document
     private $published;
 
     /**
+     * @ODM\Field(name="duplicated", type="bool")
+     */
+    private $duplicated;
+
+    /**
      * @ODM\Field(name="published_timestamp", type="integer")
      */
     private $published_timestamp;
@@ -90,6 +90,7 @@ class Note extends Document
         $this->subways   = [];
         $this->photos   = [];
         $this->published = false;
+        $this->duplicated = false;
     }
 
     /**
@@ -210,25 +211,6 @@ class Note extends Document
     /**
      * @return string
      */
-    public function getExternalId()
-    {
-        return $this->external_id;
-    }
-
-    /**
-     * @param string $external_id
-     * @return $this
-     */
-    public function setExternalId(string $external_id)
-    {
-        $this->external_id = $external_id;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
     public function getCity()
     {
         return $this->city;
@@ -336,6 +318,25 @@ class Note extends Document
     public function setLink($link)
     {
         $this->link = $link;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDuplicated()
+    {
+        return (bool)$this->duplicated;
+    }
+
+    /**
+     * @param $duplicated
+     * @return $this
+     */
+    public function setDuplicated(bool $duplicated)
+    {
+        $this->duplicated = $duplicated;
 
         return $this;
     }
