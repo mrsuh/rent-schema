@@ -78,6 +78,11 @@ class Note extends Document
     private $duplicated;
 
     /**
+     * @ODM\Field(name="source", type="string")
+     */
+    private $source;
+
+    /**
      * @ODM\Field(name="published_timestamp", type="integer")
      */
     private $published_timestamp;
@@ -337,6 +342,25 @@ class Note extends Document
     public function setDuplicated(bool $duplicated)
     {
         $this->duplicated = $duplicated;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSource()
+    {
+        return $this->source;
+    }
+
+    /**
+     * @param $source
+     * @return $this
+     */
+    public function setSource($source)
+    {
+        $this->source = $source;
 
         return $this;
     }
