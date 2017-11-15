@@ -73,19 +73,24 @@ class Note extends Document
     private $published;
 
     /**
+     * @ODM\Field(name="published_timestamp", type="integer")
+     */
+    private $published_timestamp;
+
+    /**
      * @ODM\Field(name="duplicated", type="bool")
      */
     private $duplicated;
 
     /**
+     * @ODM\Field(name="duplicated_timestamp", type="integer")
+     */
+    private $duplicated_timestamp;
+
+    /**
      * @ODM\Field(name="source", type="string")
      */
     private $source;
-
-    /**
-     * @ODM\Field(name="published_timestamp", type="integer")
-     */
-    private $published_timestamp;
 
     /**
      * Note constructor.
@@ -96,6 +101,7 @@ class Note extends Document
         $this->photos   = [];
         $this->published = false;
         $this->duplicated = false;
+        $this->duplicated_timestamp = null;
     }
 
     /**
@@ -361,6 +367,25 @@ class Note extends Document
     public function setSource($source)
     {
         $this->source = $source;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDuplicatedTimestamp()
+    {
+        return $this->duplicated_timestamp;
+    }
+
+    /**
+     * @param $duplicated_timestamp
+     * @return $this
+     */
+    public function setDuplicatedTimestamp($duplicated_timestamp)
+    {
+        $this->duplicated_timestamp = $duplicated_timestamp;
 
         return $this;
     }
