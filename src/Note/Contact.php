@@ -15,11 +15,6 @@ class Contact
     private $name;
 
     /**
-     * @ODM\Field(name="phones", type="integer[]")
-     */
-    private $phones;
-
-    /**
      * @return string
      */
     public function getName()
@@ -34,36 +29,6 @@ class Contact
     public function setName(string $name)
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * @return int[]
-     */
-    public function getPhones()
-    {
-        return $this->phones;
-    }
-
-    /**
-     * @param int[] $phones
-     * @return $this
-     */
-    public function setPhones(array $phones)
-    {
-        $this->phones = $phones;
-
-        return $this;
-    }
-
-    /**
-     * @param int $phone
-     * @return $this
-     */
-    public function addPhone(int $phone)
-    {
-        $this->phones[] = $phone;
 
         return $this;
     }
